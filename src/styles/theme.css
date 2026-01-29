@@ -94,13 +94,13 @@
   --text-monospace-body--line-height: 20px;
 
   /* Font families */
-  --font-caption: Heebo;
-  --font-caption-bold: Heebo;
-  --font-body: Heebo;
-  --font-body-bold: Heebo;
-  --font-heading-3: Heebo;
-  --font-heading-2: Heebo;
-  --font-heading-1: Heebo;
+  --font-caption: Heebo, sans-serif;
+  --font-caption-bold: Heebo, sans-serif;
+  --font-body: Heebo, sans-serif;
+  --font-body-bold: Heebo, sans-serif;
+  --font-heading-3: Heebo, sans-serif;
+  --font-heading-2: Heebo, sans-serif;
+  --font-heading-1: Heebo, sans-serif;
   --font-monospace-body: monospace;
 
   /* Box shadows */
