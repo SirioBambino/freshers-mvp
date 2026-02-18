@@ -1,8 +1,8 @@
 ---
-name: Story issue template
-about: Use this template when creating a new Story.
-title: 'Story: '
-labels: story
+name: Task issue template
+about: Use this template when creating a new Task.
+title: 'Task: '
+labels: task
 
 ---
 
