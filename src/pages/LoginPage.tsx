@@ -13,13 +13,6 @@ const LoginPage: React.FC = () => {
 				</div>
 
 				<LoginForm />
-
-				<p className="mt-8 text-center text-body">
-					Don't have an account?{" "}
-					<a href="#" className="link-auth font-semibold">
-						Get Started
-					</a>
-				</p>
 			</div>
 		</div>
 	);
