@@ -1,7 +1,8 @@
 # Cleaner Hire PWA  
 
 ## Overview
-FreshersCo is a digital platform designed to automate the coordination between cleaning staff and property hosts. This Progressive Web App (PWA) replaces manual processes with a streamlined system for job postings, application management, verified task completion, and more.
+
+This Progressive Web App (PWA) is designed to automate the coordination between cleaning staff and property hosts. It replaces manual processes with a streamlined system for job postings, application management, verified task completion, and more.
 
 ## Documentation
 

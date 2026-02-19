@@ -28,7 +28,7 @@ Database state is persistent and database migrations are not automatically rever
     ```
     ALTER TABLE JOBS DROP COLUMN IF EXISTS column_name;
     ```
-4. Execute `supabase db reset --local` to recreate the local database and apply the new migration.
+4. Run `supabase db reset --local` to recreate the local database and apply the new migration.
 5. Apply the fix to the remote environment using `supabase db push`.
 6. To verify that the rollback was successful:
     - Run `supabase migration list` and verify that the compensating transaction migration appears in both LOCAL and REMOTE columns.
