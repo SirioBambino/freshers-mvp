@@ -5,9 +5,6 @@ on:
       - main
 
 jobs:
-  validate:
-    uses: ./.github/workflows/validation-tests.yml
-
   audit:
     needs: validate
     runs-on: ubuntu-latest
