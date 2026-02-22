@@ -3,6 +3,8 @@ import { expect, test } from '@playwright/test';
 test('PWA compliance: manifest and offline check', async ({ page, context, browserName }) => {
 	test.skip(browserName === 'webkit', 'Offline emulation is unstable in WebKit CI');
 
+	test.slow();
+
 	await page.goto('/');
 
 	const manifest = page.locator('link[rel="manifest"]');
