@@ -1,16 +1,9 @@
 name: Staging Pipeline
 on:
-  workflow_run:
-    workflows: ["CI Pipeline"]
-    types:
-      - completed
+  workflow_call:
 
 jobs:
   deploy-and-audit:
-    if: >
-      github.event.workflow_run.conclusion == 'success' && 
-      github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.head_branch != 'main' 
     runs-on: ubuntu-latest
     environment: Preview
     steps:
