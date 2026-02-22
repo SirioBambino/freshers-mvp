@@ -1,13 +1,24 @@
 name: Staging Pipeline
 on:
-  workflow_call:
+  pull_request:
+    branches:
+      - 'main'
 
 jobs:
   deploy-and-audit:
     runs-on: ubuntu-latest
     environment: Preview
     steps:
-      - uses: actions/checkout@v4
+      - name: Wait for CI Validation
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          check-name: 'validate'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4

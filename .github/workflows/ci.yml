@@ -5,9 +5,6 @@ on:
       - 'main'
     tags-ignore:
       - 'v*'
-  pull_request:
-    branches:
-      - 'main'
 
 jobs:
   validate:
@@ -33,9 +30,3 @@ jobs:
 
       - name: Test
         run: npm test
-
-  trigger-staging:
-    needs: validate
-    if: github.event_name == 'pull_request' && github.base_ref == 'main'
-    uses: ./.github/workflows/staging.yml
-    secrets: inherit
