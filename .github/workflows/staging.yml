@@ -54,6 +54,6 @@ jobs:
         env:
           PLAYWRIGHT_URL: ${{ steps.deploy.outputs.url }}
         run: |
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps
           npx playwright test
 

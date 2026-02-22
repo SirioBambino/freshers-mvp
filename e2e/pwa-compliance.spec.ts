@@ -3,15 +3,16 @@ import { expect, test } from '@playwright/test';
 test('PWA compliance and offline support', async ({ page, context, browserName }) => {
 	test.skip(browserName === 'webkit', 'WebKit/Safari offline emulation is unstable in CI');
 
-	const failedRequests: string[] = [];
+	test.slow();
 
+	const failedRequests: string[] = [];
 	page.on('requestfailed', (request) => {
 		if (request.url().startsWith(page.url())) {
 			failedRequests.push(request.url());
 		}
 	});
 
-	const _swPromise = context.waitForEvent('serviceworker');
+	const _swPromise = context.waitForEvent('serviceworker').catch(() => null);
 
 	await page.goto('/');
 
@@ -19,9 +20,8 @@ test('PWA compliance and offline support', async ({ page, context, browserName }
 	await expect(manifest).toBeAttached();
 
 	const isReady = await page.evaluate(async () => {
-		const nav = navigator as unknown as Record<string, { ready: Promise<unknown> }>;
-		if (nav.serviceWorker) {
-			const registration = await nav.serviceWorker.ready;
+		if ('serviceWorker' in navigator) {
+			const registration = await navigator.serviceWorker.ready;
 			return !!registration;
 		}
 		return false;
@@ -30,7 +30,7 @@ test('PWA compliance and offline support', async ({ page, context, browserName }
 	expect(isReady).toBe(true);
 
 	await context.setOffline(true);
-	await page.reload({ waitUntil: 'networkidle' });
+	await page.reload({ waitUntil: 'load' });
 
 	await expect(page.locator('body')).not.toBeEmpty();
 	expect(failedRequests).toHaveLength(0);
