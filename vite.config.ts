@@ -17,6 +17,10 @@ export default defineConfig({
 				clientsClaim: true,
 				skipWaiting: true,
 			},
+            devOptions: {
+                enabled: true,
+                type: 'module',
+            },
 			manifest: {
 				name: 'Cleaner Hire MVP',
 				short_name: 'CleanerHire',

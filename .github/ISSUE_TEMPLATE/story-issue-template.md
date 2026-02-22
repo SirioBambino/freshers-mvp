@@ -12,14 +12,14 @@ As a **{persona}**, I want to **{action/capability}**, so that **{value/benefit}
 
 ## 2. Technical Tasks
 
-*Breakdown of the engineering work required to fulfil this story.*
+<!-- Breakdown of the engineering work required to fulfil this story. -->
 
 - [ ] #IssueNumber
 - [ ] #IssueNumber
 
 ## 3. Acceptance Criteria (AC)
 
-*The specific requirements that must be met for this story to be considered successful.*
+<!-- The specific requirements that must be met for this story to be considered successful. -->
 
 - [ ]  
 - [ ]  
