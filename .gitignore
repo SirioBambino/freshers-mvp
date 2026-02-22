@@ -7,7 +7,9 @@ dist-ssr
 *.tsbuildinfo
 
 .env
+.env*.local
 *.local
 
 /test-results/
 supabase/.temp
+.vercel

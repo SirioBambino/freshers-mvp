@@ -1,11 +1,10 @@
 name: CI Pipeline
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore:
+      - 'main'
     tags-ignore:
       - 'v*'
-workflow_call:
 
 jobs:
   validate:
