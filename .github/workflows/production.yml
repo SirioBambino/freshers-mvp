@@ -27,8 +27,11 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        permissions:
+          contents: write
+          pull-requests: write
 
-      - name: Production Deployment
+      - name: Production Migration and Deploy
         if: steps.semantic.outputs.new_release_published == 'true'
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}

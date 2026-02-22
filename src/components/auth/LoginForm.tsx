@@ -1,15 +1,15 @@
-import type React from "react";
-import { useState } from "react";
-import { Button } from "../ui/Button";
-import { Input } from "../ui/Input";
+import type React from 'react';
+import { useState } from 'react';
+import { Button } from '../ui/Button';
+import { Input } from '../ui/Input';
 
 export const LoginForm: React.FC = () => {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log("Logging in with:", { email, password });
+		console.log('Logging in with:', { email, password });
 	};
 
 	return (

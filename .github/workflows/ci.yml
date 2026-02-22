@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Format and Lint
-        run: npx @biomejs/biome check --ci 
+        run: npx @biomejs/biome check
 
       - name: Type Check
         run: npx tsc --noEmit
