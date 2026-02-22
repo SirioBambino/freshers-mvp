@@ -11,7 +11,7 @@ export default defineConfig({
 	webServer: process.env.PLAYWRIGHT_URL
 		? undefined
 		: {
-				command: 'npm run dev',
+				command: 'npm run build && npm run preview',
 				url: 'http://localhost:5173',
 				reuseExistingServer: !process.env.CI,
 				timeout: 120 * 1000,
