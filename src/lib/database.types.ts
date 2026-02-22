@@ -1,1 +1,2 @@
-export type Database = {}
+// biome-ignore lint/complexity/noBannedTypes: Test
+export type Database = {};

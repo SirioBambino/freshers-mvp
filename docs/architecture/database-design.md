@@ -97,7 +97,7 @@ erDiagram
 
     REVIEWS {
         uuid id PK
-        uuid job_id FK "References JOBS to get host/cleaner info"
+        uuid job_id FK
         integer rating
         text comment
     }

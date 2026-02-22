@@ -1,33 +1,33 @@
 @layer components {
-  .auth-page-wrapper {
-    @apply min-h-screen flex items-center justify-center px-4;
-    background-color: var(--color-neutral-50); /* Use variable directly */
-  }
+	.auth-page-wrapper {
+		@apply min-h-screen flex items-center justify-center px-4;
+		background-color: var(--color-neutral-50); /* Use variable directly */
+	}
 
-  .auth-card {
-    @apply w-full max-w-md p-8 rounded-lg shadow-lg border;
-    background-color: var(--color-white);
-    border-color: var(--color-neutral-200);
-  }
+	.auth-card {
+		@apply w-full max-w-md p-8 rounded-lg shadow-lg border;
+		background-color: var(--color-white);
+		border-color: var(--color-neutral-200);
+	}
 
-  .input-auth {
-    @apply w-full px-4 py-2.5 rounded-md border outline-none transition-all duration-200;
-    background-color: var(--color-white);
-    border-color: var(--color-neutral-200);
-    color: var(--color-default-font);
-    font-size: var(--text-body);
-  }
+	.input-auth {
+		@apply w-full px-4 py-2.5 rounded-md border outline-none transition-all duration-200;
+		background-color: var(--color-white);
+		border-color: var(--color-neutral-200);
+		color: var(--color-default-font);
+		font-size: var(--text-body);
+	}
 
-  /* Fixed focus state using theme variables */
-  .input-auth:focus {
-    border-color: var(--color-brand-500);
-    outline: 2px solid var(--color-brand-100);
-  }
+	/* Fixed focus state using theme variables */
+	.input-auth:focus {
+		border-color: var(--color-brand-500);
+		outline: 2px solid var(--color-brand-100);
+	}
 
-  .btn-auth-submit {
-    @apply w-full py-3 rounded-md transition-all duration-200 font-medium;
-    background-color: var(--color-brand-primary);
-    color: var(--color-white);
-    font-size: var(--text-heading-3);
-  }
+	.btn-auth-submit {
+		@apply w-full py-3 rounded-md transition-all duration-200 font-medium;
+		background-color: var(--color-brand-primary);
+		color: var(--color-white);
+		font-size: var(--text-heading-3);
+	}
 }

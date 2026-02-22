@@ -1,6 +1,6 @@
-# Environment Definitions
+# Environment Variables
 
-This document defines the environments, hosting platforms, and configuration variables used by the [Cleaner Hire MVP](/README.md).
+This document defines the environments and environment variables used by the [Cleaner Hire MVP](/README.md).
 
 ## 1. Environment Hierarchy
 
@@ -16,9 +16,9 @@ The application infrastructure is divided into three distinct environments to en
 
 These are all the required variables and secrets across every environment. For instructions on how to configure these values, refer to the [infrastructure setup guide](/docs/infrastructure/infrastructure-setup.md).
 
-### 2.1 Repository Secrets
+### 2.1 Global Secrets
 
-These encrypted credentials are stored at the global repository level. They enable the CI/CD pipeline to authenticate with external platform APIs.
+These are global encrypted credentials that enable the CI/CD pipeline to authenticate with external platform APIs.
 
 - `GH_TOKEN`: A GitHub Personal Access Token (PAT) required for the CI/CD pipeline.
 - `SUPABASE_ACCESS_TOKEN`: Authentication token for Supabase CLI.
@@ -28,7 +28,7 @@ These encrypted credentials are stored at the global repository level. They enab
 
 ### 2.2 Environment Variables
 
-These identifiers are non-sensitive and used to target the correct infrastructure during the deployment phase.
+These identifiers are non-sensitive and serve to reference the appropriate infrastructure during deployment. They must be configured in both staging and production environments.
 
 - `SUPABASE_PROJECT_ID`: The Supabase project reference ID used for database migrations.
 - `VITE_SUPABASE_ANON_KEY`: The client-side key used to interact with Supabase via Row Level Security (RLS).
@@ -37,7 +37,7 @@ These identifiers are non-sensitive and used to target the correct infrastructur
 
 ### 2.3 Environment Secrets
 
-These encrypted credentials are restricted to the GitHub Action runner or specific server-side functions. They must always be stored securely.
+These encrypted credentials are used during the CI/CD pipeline and specific server-side functions. They must be stored as protected secrets within both staging and production environments.
 
 - `INTERNAL_API_SECRET`: A shared secret used to verify requests between Vercel and Supabase Edge Functions.
 - `SUPABASE_DB_PASSWORD`: The Supabase database password used for database migrations.
