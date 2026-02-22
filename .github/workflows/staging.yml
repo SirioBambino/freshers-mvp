@@ -51,7 +51,9 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
       - name: Playwright Audit
+        env:
+          PLAYWRIGHT_URL: ${{ steps.deploy.outputs.url }}
         run: |
           npx playwright install --with-deps chromium
-          npx playwright test --base-url ${{ steps.deploy.outputs.url }}
+          npx playwright test
 
