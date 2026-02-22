@@ -7,15 +7,15 @@ title: 'PR: '
 
 ## 1. Description
 
-*A brief summary of what this PR introduces and the high-level technical changes made.*
+<!-- A brief summary of what this PR introduces and the high-level technical changes made. -->
 
 ## 2. Linked Issues
 
-*Use keywords (e.g., Closes #123) to link the Story and its child Tasks. Merging this PR will automatically close these issues.*
+<!-- Use keywords (e.g., Closes #123) to link the Story and its child Tasks. Merging this PR will automatically close these issues. -->
 
 - Closes #IssueNumber
 - Closes #IssueNumber
 
 ## 3. Implementation Details
 
-*Explain how the specific components, files, or configurations were modified.*
+<!-- Explain how the specific components, files, or configurations were modified. -->

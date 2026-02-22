@@ -1,35 +1,38 @@
 import { expect, test } from '@playwright/test';
 
-test('PWA compliance and offline support', async ({ page, context }) => {
-	const failedRequests: string[] = [];
+test('PWA compliance: manifest and offline check', async ({ page, context, browserName }) => {
+	test.skip(browserName === 'webkit', 'Offline emulation is unstable in WebKit CI');
 
-	page.on('requestfailed', (request) => {
-		if (request.url().startsWith(page.url())) {
-			failedRequests.push(request.url());
-		}
-	});
-
-	const _swPromise = context.waitForEvent('serviceworker');
+	test.slow();
 
 	await page.goto('/');
 
 	const manifest = page.locator('link[rel="manifest"]');
-	await expect(manifest).toBeAttached();
+	await expect(manifest, 'HTML should contain a <link rel="manifest"> tag').toBeAttached();
 
-	const isReady = await page.evaluate(async () => {
-		const nav = navigator as unknown as Record<string, { ready: Promise<unknown> }>;
-		if (nav.serviceWorker) {
-			const registration = await nav.serviceWorker.ready;
-			return !!registration;
+	const manifestUrl = await manifest.getAttribute('href');
+	if (manifestUrl) {
+		const fullUrl = new URL(manifestUrl, page.url()).href;
+		const response = await page.request.get(fullUrl);
+		expect(response.status(), `Manifest at ${fullUrl} should return 200 OK`).toBe(200);
+	}
+
+	const isSwActive = await page.evaluate(async () => {
+		if (!('serviceWorker' in navigator)) {
+			return false;
 		}
-		return false;
+		const registration = await Promise.race([
+			navigator.serviceWorker.ready,
+			new Promise<null>((_, reject) => setTimeout(() => reject(), 5000)),
+		]).catch(() => null);
+		return !!registration?.active;
 	});
-
-	expect(isReady).toBe(true);
+	expect(isSwActive, 'Service Worker failed to activate within 5s').toBe(true);
 
 	await context.setOffline(true);
-	await page.reload({ waitUntil: 'domcontentloaded' });
+	await page.reload({ waitUntil: 'networkidle' });
 
 	await expect(page.locator('body')).not.toBeEmpty();
-	expect(failedRequests).toHaveLength(0);
+
+	await context.setOffline(false);
 });

@@ -7,7 +7,15 @@
 		"defaultBranch": "main"
 	},
 	"files": {
-		"ignoreUnknown": true
+		"ignoreUnknown": true,
+		"includes": [
+			"src/**/*",
+			"e2e/**/*",
+			"!node_modules",
+			"!dist",
+			"!!playwright-report",
+			"!!test-results"
+		]
 	},
 	"formatter": {
 		"enabled": true,
