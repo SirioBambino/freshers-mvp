@@ -28,12 +28,12 @@ The transition from code completion to production follows a structured path mana
 
 ### 3.1 Quality Checks and Staging
 
-Upon merging a feature branch into `main`, the staging workflow triggers:
+Upon opening a pull request (PR) to `main`, the staging workflow triggers:
 
 1. **Validation**: Executes linting, type-checking, and unit tests.
-2. **Non-functional Tests**: Runs automated Playwright tests to ensure service worker and manifest compliance, as well as Lighthouse tests to ensure good performance and accessibility.
+2. **Non-functional Tests**: Runs automated Playwright tests to ensure service worker and manifest compliance.
 3. **Database Migration**: Pushes schema changes to the Staging Supabase project.
-4. **Preview Deployment**: Deploys the application to the Vercel Staging environment.
+4. **Preview Deployment**: Deploys the application to the Vercel Preview environment.
 
 ### 3.2 Production Release
 

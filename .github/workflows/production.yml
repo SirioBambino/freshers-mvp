@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
-      - uses: actions/checkout@v4
 
       - name: Semantic Release
         id: semantic
@@ -34,5 +33,5 @@ jobs:
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
         run: |
-          npx supabase db push --project-ref ${{ vars.SUPABASE_PROJECT_REF }} -p ${{ secrets.SUPABASE_DB_PASSWORD }} --include-all
+          npx supabase db push --project-ref ${{ vars.SUPABASE_PROJECT_ID }} -p ${{ secrets.SUPABASE_DB_PASSWORD }} 
           npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --confirm
