@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import Login from './Login';
+import { Login } from './Login';
 
 describe('Login Component', () => {
 	it('renders email and password inputs and a submit button', () => {
