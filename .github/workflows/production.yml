@@ -29,8 +29,8 @@ jobs:
         id: semantic
         uses: cycjimmy/semantic-release-action@v6
         with:
-        extra_plugins: |
-          conventional-changelog-conventionalcommits
+          extra_plugins: |
+            conventional-changelog-conventionalcommits
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
