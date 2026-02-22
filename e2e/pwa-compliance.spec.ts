@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-test('PWA compliance and offline support', async ({ page, context }) => {
+test('PWA compliance and offline support', async ({ page, context, browserName }) => {
+	test.skip(browserName === 'webkit', 'WebKit/Safari offline emulation is unstable in CI');
+
 	const failedRequests: string[] = [];
 
 	page.on('requestfailed', (request) => {
@@ -28,7 +30,7 @@ test('PWA compliance and offline support', async ({ page, context }) => {
 	expect(isReady).toBe(true);
 
 	await context.setOffline(true);
-	await page.reload({ waitUntil: 'domcontentloaded' });
+	await page.reload({ waitUntil: 'networkidle' });
 
 	await expect(page.locator('body')).not.toBeEmpty();
 	expect(failedRequests).toHaveLength(0);

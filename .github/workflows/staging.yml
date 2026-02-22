@@ -53,5 +53,5 @@ jobs:
       - name: Playwright Audit
         run: |
           npx playwright install --with-deps chromium
-          npx playwright test --baseUrl ${{ steps.deploy.outputs.url }}
+          npx playwright test --base-url ${{ steps.deploy.outputs.url }}
 
