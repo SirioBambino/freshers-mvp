@@ -38,7 +38,7 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
-          npx supabase db push --project-ref ${{ vars.SUPABASE_PROJECT_ID }} -p ${{ secrets.SUPABASE_DB_PASSWORD }}
+          npx supabase db push --db-url "postgresql://postgres:${{ secrets.SUPABASE_DB_PASSWORD }}@db.${{ vars.SUPABASE_PROJECT_ID }}.supabase.co:5432/postgres"
           
           npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --yes \
             -e NEXT_PUBLIC_SUPABASE_URL=${{ vars.SUPABASE_URL }} \
