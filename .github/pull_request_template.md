@@ -11,7 +11,7 @@ title: 'PR: '
 
 ## 2. Linked Issues
 
-<!-- Use keywords (e.g., Closes #123) to link the Story and its child Tasks. Merging this PR will automatically close these issues. -->
+<!-- Use keywords to link the Story and its child Tasks. Merging this PR will automatically close these issues. -->
 
 - Closes #IssueNumber
 - Closes #IssueNumber
