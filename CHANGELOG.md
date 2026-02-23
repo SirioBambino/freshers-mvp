@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.3...v1.0.4) (2026-02-23)
+
+### Bug Fixes
+
+* Good night ([bfc444b](https://github.com/SirioBambino/freshers-mvp/commit/bfc444b545be7084e832e63fbfb572f11d2fd341))
+* Pls work ([dd42f49](https://github.com/SirioBambino/freshers-mvp/commit/dd42f49deda69a2c653ead76955acbd5b6fba4ab))
+
 ## [1.0.3](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.2...v1.0.3) (2026-02-23)
 
 ### Bug Fixes
