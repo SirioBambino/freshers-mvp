@@ -50,7 +50,6 @@ jobs:
           echo ${{ steps.semantic.outputs.new_release_patch_version }}
       
       - name: Production Migration and Deploy
-        if: steps.semantic.outputs.new_release_published == 'true'
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
