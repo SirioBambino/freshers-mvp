@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.2...v1.0.3) (2026-02-23)
+
+### Bug Fixes
+
+* The end ([19c17a0](https://github.com/SirioBambino/freshers-mvp/commit/19c17a08e74ee8af488a1974a2533d75f7e6d7c9))
+
 ## [1.0.2](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.1...v1.0.2) (2026-02-23)
 
 ### Bug Fixes
