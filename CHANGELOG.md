@@ -1,3 +1,13 @@
+## [1.0.2](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.1...v1.0.2) (2026-02-23)
+
+### Bug Fixes
+
+* semantic-release ([4e87a89](https://github.com/SirioBambino/freshers-mvp/commit/4e87a8951bc69a773bbf59f172153cd17072d83e))
+
+### Build System
+
+* semantic-release fixes ([adfadbc](https://github.com/SirioBambino/freshers-mvp/commit/adfadbcf8fea31168258ba6ed1a5e18b1ec0e899))
+
 ## [1.0.1](https://github.com/SirioBambino/freshers-mvp/compare/v1.0.0...v1.0.1) (2026-02-23)
 
 ### Bug Fixes
