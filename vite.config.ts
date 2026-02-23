@@ -22,7 +22,7 @@ export default defineConfig({
                 type: 'module',
             },
 			manifest: {
-				name: 'Cleaner Hire MVP',
+				name: 'Cleaner Hire PWA',
 				short_name: 'CleanerHire',
 				description: 'Professional cleaning service platform.',
 				start_url: '/',

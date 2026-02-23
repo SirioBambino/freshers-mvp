@@ -1,6 +1,6 @@
 # Local Setup Guide
 
-This document defines the procedure for configuring a local development environment for the [Cleaner Hire MVP](/README.md).
+This document defines the procedure for configuring a local development environment for the [Cleaner Hire PWA](/README.md).
 
 ## 1. Development Dependencies
 
@@ -15,8 +15,8 @@ Complete these steps to bootstrap local development:
 1. Clone the repository and install dependencies.
     
     ```
-    git clone git@github.com:SirioBambino/cleaner-hire-mvp.git
-    cd cleaner-hire-mvp
+    git clone git@github.com:SirioBambino/cleaner-hire-pwa.git
+    cd cleaner-hire-pwa
     npm install
     ```
 2. Start the local Supabase environment. Ensure Docker is running before execution.

@@ -1,6 +1,6 @@
 # Testing Strategy
 
-This document outlines the testing strategy for the [Cleaner Hire MVP](/README.md). 
+This document outlines the testing strategy for the [Cleaner Hire PWA](/README.md). 
 
 ## 1. Functional Testing
 

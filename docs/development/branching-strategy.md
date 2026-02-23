@@ -1,6 +1,6 @@
 # Branching Strategy
 
-This document outlines the branching strategy for the [Cleaner Hire MVP](/README.md).
+This document outlines the branching strategy for the [Cleaner Hire PWA](/README.md).
 
 ## 1. Branches
 

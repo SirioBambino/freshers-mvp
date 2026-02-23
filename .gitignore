@@ -1,3 +1,4 @@
+logs
 *.log
 npm-debug.log*
 
@@ -13,3 +14,13 @@ dist-ssr
 /test-results/
 supabase/.temp
 .vercel
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

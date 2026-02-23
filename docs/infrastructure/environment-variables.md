@@ -1,6 +1,6 @@
 # Environment Variables
 
-This document defines the environments and environment variables used by the [Cleaner Hire MVP](/README.md).
+This document defines the environments and environment variables used by the [Cleaner Hire PWA](/README.md).
 
 ## 1. Environment Hierarchy
 

@@ -1,6 +1,6 @@
 # Technology Stack
 
-This document explains the technology stack decisions for the [Cleaner Hire MVP](/README.md).
+This document explains the technology stack decisions for the [Cleaner Hire PWA](/README.md).
 
 ## 1. Frontend Library
 **Chosen**: [React](https://react.dev/)

@@ -1,6 +1,6 @@
 # Coding Standards
 
-This document establishes the coding standards for the [Cleaner Hire MVP](/README.md). These guidelines ensure code quality, consistency, and maintainability.
+This document establishes the coding standards for the [Cleaner Hire PWA](/README.md). These guidelines ensure code quality, consistency, and maintainability.
 
 ## 1. Best Practises
 

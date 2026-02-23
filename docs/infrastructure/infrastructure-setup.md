@@ -1,6 +1,6 @@
 # Infrastructure Setup
 
-This document provides step-by-step instructions for configuring the [Cleaner Hire MVP](/README.md) infrastructure on [GitHub](#1-github-repository-setup), [Supabase](#2-supabase-setup), and [Vercel](#3-vercel-setup).
+This document provides step-by-step instructions for configuring the [Cleaner Hire PWA](/README.md) infrastructure on [GitHub](#1-github-repository-setup), [Supabase](#2-supabase-setup), and [Vercel](#3-vercel-setup).
 
 ## 1. Github Repository Setup
 

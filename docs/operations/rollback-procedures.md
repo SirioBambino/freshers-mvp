@@ -1,6 +1,6 @@
 # Rollback Procedures
 
-This document defines the protocols for reverting the application to a stable state in the event of a critical failure within the [Cleaner Hire MVP](/README.md).
+This document defines the protocols for reverting the application to a stable state in the event of a critical failure within the [Cleaner Hire PWA](/README.md).
 
 ## 1. Front-end Rollbacks
 
